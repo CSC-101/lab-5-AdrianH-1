@@ -2,6 +2,7 @@ import data
 import unittest
 
 
+#### Add tests for Time.__eq__
 class TestCases(unittest.TestCase):
     #### Time tests
     def test_Time_1(self):
@@ -18,12 +19,13 @@ class TestCases(unittest.TestCase):
         self.assertEqual(45, time.second)
 
 
-    #### Add tests for Time.__eq__
 
     #### Add tests for Time.__repr__
-
-
-
+    def test_time_repr(self):
+        # Test that __repr__ returns the correct string
+        time = Time(10, 30, 25)
+        expected_repr = "Time(hour=10, minute=30, second=25)"
+        self.assertEqual(repr(time), expected_repr)
 
     #### Point tests
     def test_Point_1(self):
